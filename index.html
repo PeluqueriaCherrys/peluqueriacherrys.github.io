@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Peluquería Cherry's · Peluquería y estilistas en Palma (Camí de la Vileta)</title>
-<meta name="description" content="Peluquería Cherry's en el Camí de la Vileta, 55 (Palma). Cortes para mujer, hombre y niños, color, mechas, balayage y trenzas. Pide tu cita por WhatsApp.">
+<meta name="description" content="Peluquería Cherry's en el Camí de la Vileta, 55 (Palma). Cortes para mujer, hombre y niños, color, mechas, balayage y trenzas. Pide tu cita por teléfono.">
 <meta name="theme-color" content="#5e0f24">
 <meta property="og:title" content="Peluquería Cherry's · Palma">
 <meta property="og:description" content="Corte, color, balayage y trenzas para toda la familia. Camí de la Vileta, 55, Palma.">
@@ -57,7 +57,7 @@
   --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
+html{scroll-behavior:smooth;scroll-padding-top:112px}
 body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
@@ -72,7 +72,7 @@ h2 em{font-style:italic;font-weight:400;color:var(--cherry)}
 .lead{max-width:56ch;color:var(--muted);font-size:1.08rem}
 .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.6rem;border-radius:999px;font-weight:600;font-size:.98rem;transition:transform .25s,box-shadow .25s,background .25s}
 .btn:hover{transform:translateY(-3px)}
-.btn-wa{background:#25d366;color:#06361b;box-shadow:0 12px 30px -10px rgba(37,211,102,.7)}
+.btn-wa{background:linear-gradient(135deg,#ecd0a0,#c9a36b);color:#3a0816;box-shadow:0 12px 30px -10px rgba(201,163,107,.8)}
 .btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
 .btn-ghost:hover{background:rgba(255,255,255,.12)}
 .btn-dark{background:var(--cherry);color:#fff}
@@ -81,7 +81,11 @@ h2 em{font-style:italic;font-weight:400;color:var(--cherry)}
 
 /* NAV */
 header.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s,padding .3s;padding:18px 0}
-header.nav.scrolled{background:rgba(251,245,239,.88);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(94,15,36,.1);padding:10px 0}
+header.nav::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(251,245,239,.96);backdrop-filter:blur(14px)}
+header.nav.scrolled{box-shadow:0 6px 20px -12px rgba(58,8,22,.45);padding:10px 0 0}
+.nav .wrap{padding-bottom:10px}
+.nav .marquee{padding:.5rem 0;font-size:1.05rem}
+.nav .marquee span::after{margin-left:2.5rem;font-size:.8rem}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:.6rem;font-family:var(--serif);font-weight:800;font-size:1.45rem;color:#fff;transition:color .3s}
 .nav.scrolled .logo{color:var(--cherry-dark)}
@@ -91,7 +95,7 @@ header.nav.scrolled{background:rgba(251,245,239,.88);backdrop-filter:blur(14px);
 .nav.scrolled .menu a{color:var(--ink)}
 .menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--gold);transition:width .3s}
 .menu a:not(.btn):hover::after{width:100%}
-.menu .btn{padding:.6rem 1.2rem;font-size:.88rem;color:#06361b}
+.menu .btn{padding:.6rem 1.2rem;font-size:.88rem;color:#3a0816}
 .burger{display:none;width:44px;height:44px;border-radius:50%;align-items:center;justify-content:center;color:#fff}
 .nav.scrolled .burger{color:var(--cherry-dark)}
 .burger span,.burger span::before,.burger span::after{display:block;width:22px;height:2px;background:currentColor;position:relative;transition:.3s}
@@ -102,7 +106,7 @@ header.nav.scrolled{background:rgba(251,245,239,.88);backdrop-filter:blur(14px);
 .nav.open .burger span::after{top:0;transform:rotate(-45deg)}
 
 /* HERO */
-.hero{min-height:auto;display:grid;align-items:center;color:#fff;padding:104px 0 70px;overflow:hidden;
+.hero{min-height:auto;display:grid;align-items:center;color:#fff;padding:150px 0 70px;overflow:hidden;
   background:radial-gradient(1000px 600px at 85% 10%,#b8294a 0%,transparent 60%),radial-gradient(800px 500px at 0% 100%,#7d1230 0%,transparent 60%),linear-gradient(160deg,var(--cherry-dark),var(--cherry-deep))}
 .hero::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.06'/%3E%3C/svg%3E");mix-blend-mode:overlay;pointer-events:none}
 .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
@@ -236,10 +240,10 @@ footer li{list-style:none;margin:.35rem 0}
 .to-top:hover{background:var(--cherry-dark);transform:translateY(-3px)}
 .to-top svg{width:22px;height:22px}
 /* WHATSAPP FLOAT */
-.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(37,211,102,.8);transition:transform .25s}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,#ecd0a0,#c9a36b);color:#3a0816;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(201,163,107,.9);transition:transform .25s}
 .wa-float:hover{transform:scale(1.1)}
-.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ping 2.4s infinite}
-.wa-float svg{width:32px;height:32px}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #c9a36b;animation:ping 2.4s infinite}
+.wa-float svg{width:28px;height:28px}
 @keyframes ping{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.7);opacity:0}}
 
 /* COOKIES */
@@ -279,11 +283,11 @@ footer li{list-style:none;margin:.35rem 0}
   .grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:44vw}
   footer .wrap{grid-template-columns:1fr}
   .burger{display:flex}
-  .menu{position:fixed;inset:0 0 0 auto;width:min(78vw,320px);background:var(--cherry-deep);flex-direction:column;justify-content:center;gap:1.6rem;transform:translateX(100%);transition:transform .4s}
+  .menu{position:fixed;inset:0 0 0 auto;width:min(78vw,320px);background:var(--cherry-deep);flex-direction:column;justify-content:center;gap:1.6rem;transform:translateX(100%);transition:transform .4s;z-index:3}
   .menu a,.nav.scrolled .menu a{color:#fff;font-size:1.2rem}
   .nav.open .menu{transform:none}
   .nav.open .burger{position:relative;z-index:2;color:#fff}
-  .hero{padding-top:88px}
+  .hero{padding-top:128px}
 }
 @media(max-width:520px){.feats{grid-template-columns:1fr}.tag{left:-6px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
@@ -307,6 +311,12 @@ footer li{list-style:none;margin:.35rem 0}
       <a href="#" class="btn btn-wa" data-wa="Hola Cherry's, me gustaría pedir cita.">Pedir cita</a>
     </nav>
   </div>
+  <div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Corte</span><span>Color</span><span>Mechas</span><span>Balayage</span><span>Trenzas</span><span>Corte infantil</span><span>Corrección de color</span><span>Tratamientos</span>
+    <span>Corte</span><span>Color</span><span>Mechas</span><span>Balayage</span><span>Trenzas</span><span>Corte infantil</span><span>Corrección de color</span><span>Tratamientos</span>
+  </div>
+</div>
 </header>
 
 <main>
@@ -320,8 +330,8 @@ footer li{list-style:none;margin:.35rem 0}
       <p class="lead">Corte, color, mechas, balayage y trenzas para mujeres, hombres y niños. Un salón de barrio en el Camí de la Vileta con trato cercano y cuidado en cada detalle.</p>
       <div class="cta">
         <a href="#" class="btn btn-wa" data-wa="Hola Cherry's, me gustaría pedir cita.">
-          <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 2.4a10.6 10.6 0 1 1-5.4 19.7l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 0 1 16 5.4zm-3.7 5.4c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.8 5.9 5.2 2.9 1.100 3.5.9 4.1.8.6-.1 2-.8 2.3-1.600.3-.8.3-1.500.2-1.600-.1-.1-.3-.2-.7-.4l-2.200-1.100c-.3-.1-.5-.2-.8.2-.2.300-.9 1.100-1.100 1.300-.2.200-.4.200-.7.100-.4-.2-1.500-.6-2.800-1.700-1-.9-1.700-2-1.900-2.400-.2-.4 0-.6.200-.8l.5-.6c.2-.2.200-.4.400-.6.100-.3.100-.5 0-.7l-1-2.300c-.3-.7-.6-.6-.8-.6z"/></svg>
-          Reservar por WhatsApp
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Llamar para reservar
         </a>
         <a href="#carta" class="btn btn-ghost">Ver servicios y precios</a>
       </div>
@@ -334,12 +344,6 @@ footer li{list-style:none;margin:.35rem 0}
   </div>
 </section>
 
-<div class="marquee" aria-hidden="true">
-  <div class="track">
-    <span>Corte</span><span>Color</span><span>Mechas</span><span>Balayage</span><span>Trenzas</span><span>Corte infantil</span><span>Corrección de color</span><span>Tratamientos</span>
-    <span>Corte</span><span>Color</span><span>Mechas</span><span>Balayage</span><span>Trenzas</span><span>Corte infantil</span><span>Corrección de color</span><span>Tratamientos</span>
-  </div>
-</div>
 
 <!-- ============ NOSOTROS ============ -->
 <section class="about" id="nosotros">
@@ -366,7 +370,7 @@ footer li{list-style:none;margin:.35rem 0}
   <div class="wrap">
     <p class="eyebrow rv">Servicios y precios</p>
     <h2 class="rv">Nuestra <em>carta</em></h2>
-    <p class="lead rv">Pulsa en cualquier servicio y te abrimos un WhatsApp con el mensaje ya escrito para pedir cita.</p>
+    <p class="lead rv">Pulsa en cualquier servicio para llamarnos y pedir tu cita.</p>
 
     <div class="tabs" role="tablist" aria-label="Categorías de la carta">
       <button class="tab" role="tab" aria-selected="true" aria-controls="p-corte" id="t-corte">Corte</button>
@@ -435,7 +439,7 @@ footer li{list-style:none;margin:.35rem 0}
     <div class="rv">
       <p class="eyebrow">Visítanos</p>
       <h2>Horarios y <em>cómo llegar</em></h2>
-      <p class="lead" style="margin-bottom:1rem">Estamos en el Camí de la Vileta (Ponent), una zona residencial tranquila, lejos del bullicio turístico, bien comunicada en transporte público y con acceso sencillo en coche. Llámanos para pedir cita o escríbenos por WhatsApp.</p>
+      <p class="lead" style="margin-bottom:1rem">Estamos en el Camí de la Vileta (Ponent), una zona residencial tranquila, lejos del bullicio turístico, bien comunicada en transporte público y con acceso sencillo en coche. Llámanos al 971 73 41 37 para pedir cita.</p>
       <div class="status" id="status" role="status"><span class="dot"></span><span id="statusText">Comprobando horario…</span></div>
       <ul class="hours" id="hours">
         <li data-d="1"><span>Lunes</span><span class="closed-day">Cerrado</span></li>
@@ -449,7 +453,7 @@ footer li{list-style:none;margin:.35rem 0}
       <div class="contact">
         <a href="https://maps.google.com/?daddr=Cam%C3%AD%20de%20la%20Vileta%2C%2055%2C%2007011%20Palma" target="_blank" rel="noopener">📍 Camí de la Vileta, 55 · 07011 Palma</a>
         <a href="tel:+34971734137">📞 971 73 41 37</a>
-        <a href="#" data-wa="Hola Cherry's, quería preguntaros una cosa.">💬 Escríbenos por WhatsApp</a>
+        <a href="#" data-wa="Hola Cherry's, quería preguntaros una cosa.">📞 Reserva tu cita por teléfono</a>
       </div>
     </div>
     <div class="mapbox rv" id="mapbox">
@@ -502,8 +506,8 @@ footer li{list-style:none;margin:.35rem 0}
 <a href="#inicio" class="to-top" id="toTop" aria-label="Volver al inicio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
 
 <!-- WhatsApp flotante -->
-<a href="#" class="wa-float" data-wa="Hola Cherry's, me gustaría pedir cita." aria-label="Escribir por WhatsApp">
-  <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 2.4a10.6 10.6 0 1 1-5.4 19.7l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 0 1 16 5.4zm-3.7 5.4c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.8 5.9 5.2 2.9 1.1 3.5.9 4.1.8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.7-.4l-2.200-1.100c-.3-.1-.5-.2-.8.2-.2.3-.9 1.100-1.100 1.300-.2.200-.4.200-.7.100-.4-.2-1.500-.6-2.800-1.700-1-.9-1.700-2-1.900-2.400-.2-.4 0-.6.200-.8l.5-.6c.2-.2.200-.4.400-.6.100-.3.100-.5 0-.7l-1-2.300c-.3-.7-.6-.6-.8-.6z"/></svg>
+<a href="#" class="wa-float" data-wa="Hola Cherry's, me gustaría pedir cita." aria-label="Llamar para pedir cita">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
 </a>
 
 <!-- Lightbox -->
@@ -552,9 +556,9 @@ footer li{list-style:none;margin:.35rem 0}
 <script>
 /* ====== CONFIGURACIÓN DEL CLIENTE (editar aquí) ====== */
 const CONFIG = {
-  // Número de WhatsApp en formato internacional, sin + ni espacios.
-  // OJO: 971 73 41 37 es un fijo. Sustituir por el móvil con WhatsApp del salón.
-  whatsapp: "34971734137",
+  // Teléfono del salón en formato internacional, sin + ni espacios (es un fijo, sin WhatsApp).
+  // Si el cliente da de alta un WhatsApp, volver a usar enlaces https://wa.me/<número>.
+  phone: "34971734137",
   mapQuery: "Camí de la Vileta, 55, 07011 Palma, Illes Balears",
   mapLat: 39.5896411, mapLng: 2.6241108,
   // Horario: 0=domingo ... 6=sábado. null = cerrado. [apertura, cierre] en minutos desde 00:00
@@ -566,11 +570,8 @@ const $ = (s, c=document) => c.querySelector(s);
 const $$ = (s, c=document) => [...c.querySelectorAll(s)];
 $('#year').textContent = new Date().getFullYear();
 
-/* WhatsApp */
-$$('[data-wa]').forEach(a => {
-  a.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(a.dataset.wa)}`;
-  a.target = '_blank'; a.rel = 'noopener';
-});
+/* Reservas: llamada al teléfono fijo del salón */
+$$('[data-wa]').forEach(a => { a.href = `tel:+${CONFIG.phone}`; a.removeAttribute('target'); a.removeAttribute('rel'); });
 
 /* Nav */
 const nav = $('#nav');
